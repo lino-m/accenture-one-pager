@@ -1,0 +1,256 @@
+#hero-area {
+  background-image: url(SubtractTriangle-Mountain.png);
+  background-position: right;
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+  margin-top: 80px;
+  height: 100vh;
+  width: 100%;
+  .container-headlines {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 35vh;
+    margin: auto;
+    width: 80%;
+    .headline-hero {
+      font-size: 3.5rem !important;
+      font-weight: 900 !important;
+      width: 400px;
+    }
+    .headline-hearo, .my-line {
+      color: white;
+      text-align: right;
+    }
+  }
+  .page-mission {
+    position: absolute;
+    bottom: 0px;
+    text-align: right;
+    right: 30px;
+    font-size: 20px;
+    color: white;
+    width: 36%;
+    font-weight: lighter;
+    margin: 16px 16px;
+  }
+}
+
+#hero-area {
+  /***scroll down*************/
+   @-webkit-keyframes ani-mouse {
+    0% {
+    opacity: 1;
+    top: 29%;
+    }
+    15% {
+    opacity: 1;
+    top: 50%;
+    }
+    50% {
+    opacity: 0;
+    top: 50%;
+    }
+    100% {
+    opacity: 0;
+    top: 29%;
+    }
+  }
+   @-moz-keyframes ani-mouse {
+    0% {
+    opacity: 1;
+    top: 29%;
+    }
+    15% {
+    opacity: 1;
+    top: 50%;
+    }
+    50% {
+    opacity: 0;
+    top: 50%;
+    }
+    100% {
+    opacity: 0;
+    top: 29%;
+    }
+  }
+   @keyframes ani-mouse {
+    0% {
+    opacity: 1;
+    top: 29%;
+    }
+    15% {
+    opacity: 1;
+    top: 50%;
+    }
+    50% {
+    opacity: 0;
+    top: 50%;
+    }
+    100% {
+    opacity: 0;
+    top: 29%;
+    }
+  }
+   .scroll-btn {
+    display: block;
+    position: absolute;
+    left: 60px;
+    text-align: center;
+    top: 85%;
+  }
+  .scroll-btn > * {
+    display: inline-block;
+    line-height: 18px;
+    font-size: 13px;
+    font-weight: normal;
+    color: black;
+    font-family: "proxima-nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    letter-spacing: 2px;
+  }
+  .scroll-btn > *:hover,
+  .scroll-btn > *:focus,
+  .scroll-btn > *.active {
+    color: black;
+  }
+  .scroll-btn > *:hover,
+  .scroll-btn > *:focus,
+  .scroll-btn > *:active,
+  .scroll-btn > *.active {
+    opacity: 0.8;
+    filter: alpha(opacity=80);
+  }
+  .scroll-btn .mouse {
+    position: relative;
+    display: block;
+    width: 32px;
+    height: 55px;
+    margin: 0 auto 20px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    border: 2px solid black;
+    border-radius: 23px;
+  }
+  .scroll-btn .mouse > * {
+    position: absolute;
+    display: block;
+    top: 29%;
+    left: 50%;
+    width: 8px;
+    height: 8px;
+    margin: -4px 0 0 -4px;
+    // Change Mouse Scroll color here
+    background: black;
+    border-radius: 50%;
+    -webkit-animation: ani-mouse 2.5s linear infinite;
+    -moz-animation: ani-mouse 2.5s linear infinite;
+    animation: ani-mouse 2.5s linear infinite;
+  }
+
+  /***************/
+
+  .scroll-prompt {
+      position: absolute;
+      bottom: 9%;
+      left: 50%;
+      z-index: 100;
+      -moz-transition: opacity 1s ease-out;
+      -o-transition: opacity 1s ease-out;
+      -webkit-transition: opacity 1s ease-out;
+      transition: opacity 1s ease-out;
+  }
+
+  .scroll-prompt .scroll-prompt-shape {
+      position: relative;
+      -moz-animation: slidedown 2.25s infinite;
+      -webkit-animation: slidedown 2.25s infinite;
+      animation: slidedown 2.25s infinite;
+  }
+
+  .scroll-prompt .scroll-prompt-shape:before,
+  .scroll-prompt .scroll-prompt-shape:after {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 1.5em;
+      height: 0.2em;
+      top: 0;
+      left: 0;
+      // Change second to last arrow color here
+      background: black;
+      -moz-border-radius: 0 0.25em 0.25em 0;
+      -webkit-border-radius: 0;
+      border-radius: 0 0.25em 0.25em 0;
+      -moz-transform-origin: bottom left;
+      -ms-transform-origin: bottom left;
+      -webkit-transform-origin: bottom left;
+      transform-origin: bottom left;
+  }
+
+  .scroll-prompt .scroll-prompt-shape:before {
+      -moz-transform: scaleX(-1) rotate(-45deg);
+      -ms-transform: scaleX(-1) rotate(-45deg);
+      -webkit-transform: scaleX(-1) rotate(-45deg);
+      transform: scaleX(-1) rotate(-45deg);
+  }
+
+  .scroll-prompt .scroll-prompt-shape:after {
+      -moz-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+      -webkit-transform: rotate(-45deg);
+      transform: rotate(-45deg);
+  }
+
+  .scroll-prompt2 {
+      position: absolute;
+      bottom: -4%;
+      left: 50%;
+      z-index: 100;
+      -moz-transition: opacity 1s ease-out;
+      -o-transition: opacity 1s ease-out;
+      -webkit-transition: opacity 1s ease-out;
+      transition: opacity 1s ease-out;
+  }
+
+  .scroll-prompt2 .scroll-prompt-shape2 {
+      position: relative;
+      -moz-animation: slidedown 2.25s infinite;
+      -webkit-animation: slidedown 2.25s infinite;
+      animation: slidedown 2.25s infinite;
+  }
+
+  .scroll-prompt2 .scroll-prompt-shape2:before,
+  .scroll-prompt2 .scroll-prompt-shape2:after {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 1.5em;
+      height: 0.2em;
+      top: 0;
+      left: 0;
+      // Change lower arrow color here
+      background: black;
+      -moz-border-radius: 0 0.25em 0.25em 0;
+      -webkit-border-radius: 0;
+      border-radius: 0 0.25em 0.25em 0;
+      -moz-transform-origin: bottom left;
+      -ms-transform-origin: bottom left;
+      -webkit-transform-origin: bottom left;
+      transform-origin: bottom left;
+  }
+
+  .scroll-prompt2 .scroll-prompt-shape2:before {
+      -moz-transform: scaleX(-1) rotate(-45deg);
+      -ms-transform: scaleX(-1) rotate(-45deg);
+      -webkit-transform: scaleX(-1) rotate(-45deg);
+      transform: scaleX(-1) rotate(-45deg);
+  }
+
+  .scroll-prompt2 .scroll-prompt-shape2:after {
+      -moz-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+      -webkit-transform: rotate(-45deg);
+      transform: rotate(-45deg);
+  }
+
+}
