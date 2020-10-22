@@ -1,0 +1,31 @@
+.box-stat{
+  height: 180px;
+  text-align: left;
+  line-height: 1.5rem;
+  margin-top: 12px;
+  .big-number {
+    font-weight: 300 !important;
+    font-size: 64px;
+    margin-bottom: 24px;
+  }
+}
+
+.box-stat-one {
+  text-align: center;
+  height: 50vh;
+  margin: auto;
+}
+
+.box-stat-bottom {
+  height: 180px;
+  width: 720px;
+  text-align: center;
+  line-height: 1.5rem;
+  margin: auto;
+  .big-number {
+    font-weight: 300 !important;
+    font-size: 64px;
+    margin-bottom: 24px;
+  }
+}
+
