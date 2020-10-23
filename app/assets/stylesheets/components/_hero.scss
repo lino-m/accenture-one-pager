@@ -9,7 +9,7 @@
   .container-headlines {
     display: flex;
     justify-content: space-between;
-    padding-top: 35vh;
+    padding-top: 30vh;
     margin: auto;
     width: 80%;
     .headline-hero {
@@ -32,6 +32,8 @@
     width: 36%;
     font-weight: lighter;
     margin: 16px 16px;
+    padding: 8px 24px;
+    border: 4px solid white;
   }
 }
 
