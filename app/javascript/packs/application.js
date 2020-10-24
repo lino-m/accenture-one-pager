@@ -15,6 +15,7 @@ require("channels");
 // const imagePath = (name) => images(name, true)
 import "bootstrap";
 
+
 const articles = document.querySelectorAll('article');
 
 articles.forEach(article => {
@@ -47,6 +48,7 @@ articles.forEach(article => {
   article.addEventListener('mouseout', handleOut);
 })
 
+
 const initFaderOnScroll = () => {
   console.clear();
   const faders = document.querySelectorAll('.fade-in');
@@ -61,14 +63,15 @@ const initFaderOnScroll = () => {
       if (entry.isIntersecting) {
         entry.target.classList.add('appear');
         appearOnScroll.unobserve(entry.target);
+        cnsole.log(entry);
       }
     });
-  }
+  };
 
   faders.forEach(fader => {
     appearOnScroll.observe(fader);
   });
-}
+};
 
 initFaderOnScroll;
 
