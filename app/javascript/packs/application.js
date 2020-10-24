@@ -13,10 +13,7 @@ require("channels");
 //
 // const images = require.context("../images", true);
 // const imagePath = (name) => images(name, true)
-
 import "bootstrap";
-
-console.log("Hello from app/javascript/packs/application.js!");
 
 const articles = document.querySelectorAll('article');
 
@@ -50,5 +47,28 @@ articles.forEach(article => {
   article.addEventListener('mouseout', handleOut);
 })
 
+const initFaderOnScroll = () => {
+  console.clear();
+  const faders = document.querySelectorAll('.fade-in');
+  // Change appear options here -> reduce threshold -> element appears sooner
+  const appearOptions = {
+    threshold: 1,
+    rootMargin: "0px 0px -100px 0px"
+  };
+  // Create new observer
+  const appearOnScroll = new IntersectionObserver(entries, appearOptions) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('appear');
+        appearOnScroll.unobserve(entry.target);
+      }
+    });
+  }
 
+  faders.forEach(fader => {
+    appearOnScroll.observe(fader);
+  });
+}
+
+initFaderOnScroll;
 
