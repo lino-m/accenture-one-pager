@@ -3,9 +3,9 @@
 // a relevant structure within app/javascript and only use these pack files to reference
 // that code so it'll be compiled.
 
-require("@rails/ujs").start();
-require("turbolinks").start();
-require("channels");
+require("@rails/ujs").start()
+require("turbolinks").start()
+require("channels")
 
 // Uncomment to copy all static images under ../images to the output folder and reference
 // them with the image_pack_tag helper in views (e.g <%= image_pack_tag 'rails.png' %>)
@@ -15,6 +15,10 @@ require("channels");
 // const imagePath = (name) => images(name, true)
 import "bootstrap";
 
+
+// TEMP-Work environment
+
+// Perspective-Seeker-Effect Moving with curser
 
 const articles = document.querySelectorAll('article');
 
@@ -49,29 +53,32 @@ articles.forEach(article => {
 })
 
 
+// FADING_IN EFFECT -> For selected Elements
+
+
 const initFaderOnScroll = () => {
   console.clear();
   const faders = document.querySelectorAll('.fade-in');
   // Change appear options here -> reduce threshold -> element appears sooner
   const appearOptions = {
-    threshold: 1,
+    threshold: .3,
     rootMargin: "0px 0px -100px 0px"
   };
   // Create new observer
-  const appearOnScroll = new IntersectionObserver(entries, appearOptions) => {
+
+  let appearOnScroll = new IntersectionObserver((entries, appearOptions) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
         entry.target.classList.add('appear');
         appearOnScroll.unobserve(entry.target);
-        cnsole.log(entry);
       }
     });
-  };
+  }, appearOptions);
 
   faders.forEach(fader => {
     appearOnScroll.observe(fader);
   });
-};
+}
 
-initFaderOnScroll;
 
+initFaderOnScroll();
