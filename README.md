@@ -1,24 +1,20 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+---
 
-Things you may want to cover:
+## Coding Challenge for Accenture Workshop
 
-* Ruby version
+### Accenture's Hiring Objective
+Hire people that are:
+1. Have creative ideas
+2. Are passionate about innocation
+3. Want to make a difference
 
-* System dependencies
+### Challenge Objective
 
-* Configuration
+... develop an interactive one pager about Accenture.
 
-* Database creation
+The scope of the challenge is not specified. However, it states clearly that there are no limitations to our approach but that this challenge goes beyond the realms of coding to test our creativity.
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+---
+## Link to heroku app: https://accenture-one-pager-ljm-case.herokuapp.com/
