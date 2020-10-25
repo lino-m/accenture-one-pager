@@ -16,8 +16,7 @@ require("channels")
 import "bootstrap";
 
 
-// TEMP-Work environment
-
+// TEMP-Work environment -> If time left compartmentalize
 // Perspective-Seeker-Effect Moving with curser
 
 const articles = document.querySelectorAll('article');
@@ -55,14 +54,12 @@ articles.forEach(article => {
 
 // FADING_IN EFFECT -> For selected Elements
 
-
 const initFaderOnScroll = () => {
-  console.clear();
   const faders = document.querySelectorAll('.fade-in');
   // Change appear options here -> reduce threshold -> element appears sooner
   const appearOptions = {
-    threshold: .3,
-    rootMargin: "0px 0px -100px 0px"
+    threshold: 0,
+    rootMargin: "0px 0px -50px 0px"
   };
   // Create new observer
 
@@ -80,5 +77,18 @@ const initFaderOnScroll = () => {
   });
 }
 
-
 initFaderOnScroll();
+
+
+// When prompted to scroll - show all fade-ins
+
+const prompt = document.querySelector('.scroll-btn');
+
+prompt.addEventListener('click', (event) => {
+ event.preventDefault();
+ $('html, body').animate({scrollTop:0}, '300');
+});
+
+
+
+

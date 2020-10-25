@@ -19,9 +19,14 @@
   .text {
     width: 60%;
     margin: 0 auto;
-    margin-bottom: 24px;
+    margin-bottom: 25px;
   }
 }
+
+.shared-values {
+  margin-top: 40px;
+}
+
 
 .traits {
     display: flex;
@@ -31,10 +36,14 @@
 }
 
 .fade-in {
+  transform: translateY(70%);
   opacity: 0;
-  transition: opacity 250ms ease-in;
+  transition: opacity .5s ease-in, transfrom 1s ease-in;
 }
 
-.fade-in.appear {
+.fade-in.appear{
+  transform: translateY(0);
   opacity: 1;
 }
+
+
