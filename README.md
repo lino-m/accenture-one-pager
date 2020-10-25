@@ -1,7 +1,5 @@
 # README
 
----
-
 ## Coding Challenge for Accenture Workshop
 
 ### Accenture's Hiring Objective
